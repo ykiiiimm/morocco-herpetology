@@ -4,6 +4,7 @@ import React from 'react';
 import { PARTNERS_DATA } from '@/data/partners';
 import { Award } from 'lucide-react';
 import { useLocale } from '@/context/LocaleContext';
+import { getAssetPath } from '@/utils/assets';
 
 export function InstitutionalPartners() {
   const { t, locale } = useLocale();
@@ -101,7 +102,7 @@ export function InstitutionalPartners() {
           }}
         >
           <img
-            src={partner.logo}
+            src={getAssetPath(partner.logo)}
             alt={partner.name}
             loading="lazy"
             style={{

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useLocale } from '@/context/LocaleContext';
 import { Locale } from '@/data/translations';
 import { Menu, X, ChevronDown, Languages } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 /* ─────────────────────────────────────────────────────────────
    Navigation Configuration
@@ -174,7 +175,7 @@ export default function Navbar() {
           }}
         >
           <img
-            src="/logo.png"
+            src={getAssetPath('/logo.png')}
             alt="Morocco Herpetology"
             style={{
               height: '40px',

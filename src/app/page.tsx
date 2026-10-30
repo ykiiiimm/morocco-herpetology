@@ -7,6 +7,7 @@ import { PUBLICATIONS_DATA } from '@/data/publications';
 import { SpeciesDetailModal } from '@/components/species/SpeciesDetailModal';
 import { useLocale } from '@/context/LocaleContext';
 import { ArrowRight, ArrowLeft, ChevronRight, ChevronLeft } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 /* ─────────────────────────────────────────────────────────────
    Data helpers
@@ -392,7 +393,7 @@ export default function HomePage() {
           <div style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#0D1F15' }}>
             <video
               ref={videoRef}
-              src="/hero-video.mp4"
+              src={getAssetPath('/hero-video.mp4')}
               autoPlay
               loop
               muted

@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useLocale } from '@/context/LocaleContext';
 import { ArrowUp } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 export default function Footer() {
   const { t, locale, dir } = useLocale();
@@ -63,7 +64,7 @@ export default function Footer() {
           {/* Logo mark */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <img
-              src="/logo.png"
+              src={getAssetPath('/logo.png')}
               alt="Morocco Herpetology"
               style={{
                 height: '46px',
